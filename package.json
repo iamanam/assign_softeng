@@ -1,0 +1,56 @@
+{
+  "name": "petbuster",
+  "description": "pet buster managment",
+  "version": "0.0.0",
+  "author": "iamanam @iamanam",
+  "bin": {
+    "petbuster": "./bin/run"
+  },
+  "bugs": "https://github.com/iamanam/petbuster/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.17",
+    "@oclif/config": "^1.13.2",
+    "@oclif/plugin-help": "^2.2.0",
+    "chalk": "^2.4.2",
+    "cli-ux": "^5.3.1",
+    "inquirer": "^6.5.0",
+    "inquirer-chalk-pipe": "^1.3.0",
+    "inquirer-datepicker-prompt": "^0.4.2",
+    "sequelize": "^5.10.1",
+    "sqlite3": "^4.0.9",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.0",
+    "globby": "^10.0.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/iamanam/petbuster",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "petbuster",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "iamanam/petbuster",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
